@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on darrkenn</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on darrkenn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 21 Oct 2025 17:08:24 +0100</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using ventoy to bypass secure boot</title>
+      <link>http://localhost:1313/posts/ventoy-boot/</link>
+      <pubDate>Tue, 21 Oct 2025 17:08:24 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/ventoy-boot/</guid>
+      
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;My laptop is a &lt;a href=&#34;https://business.currys.co.uk/catalogue/computing/laptops/windows-laptop/acer-aspire-vero-av14-52p-14-laptop-intel-core-i5-512-gb-ssd-blue/N853644W&#34;&gt;Acer Aspire Vero AV14&lt;/a&gt;, it serves me well and is very powerful.
+However recently Acer have locked my bios after I repeatedly changed my OS from Windows to Linux.I am completely unable to access the boot menu/bios settings as it prompts me to enter a password, I tried the usual solution of resetting the bios by removing the CMOS however it isn&amp;rsquo;t removable and I can&amp;rsquo;t find it on the board.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using ventoy to bypass secure boot</title>
+      <link>http://localhost:1313/posts/ventoy-boot/ventoy-boot/</link>
+      <pubDate>Tue, 21 Oct 2025 17:08:24 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/ventoy-boot/ventoy-boot/</guid>
+      
+      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;My laptop is a &lt;a href=&#34;https://business.currys.co.uk/catalogue/computing/laptops/windows-laptop/acer-aspire-vero-av14-52p-14-laptop-intel-core-i5-512-gb-ssd-blue/N853644W&#34;&gt;Acer Aspire Vero AV14&lt;/a&gt;, it serves me well and is very powerful.
+However recently Acer have locked my bios after I repeatedly changed my OS from Windows to Linux.I am completely unable to access the boot menu/bios settings as it prompts me to enter a password, I tried the usual solution of resetting the bios by removing the CMOS however it isn&amp;rsquo;t removable and I can&amp;rsquo;t find it on the board.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

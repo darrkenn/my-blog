@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Using ventoy to bypass secure boot | darrkenn</title>
+<meta property="og:title" content="Using ventoy to bypass secure boot | darrkenn" />
+<meta name="twitter:title" content="Using ventoy to bypass secure boot | darrkenn" />
+<meta itemprop="name" content="Using ventoy to bypass secure boot | darrkenn" />
+<meta name="application-name" content="Using ventoy to bypass secure boot | darrkenn" />
+<meta property="og:site_name" content="darrkenn | blog" />
+
+<meta name="description" content="Eh, I&#39;ll post a blog tomorrow">
+<meta itemprop="description" content="Eh, I&#39;ll post a blog tomorrow" />
+<meta property="og:description" content="Eh, I&#39;ll post a blog tomorrow" />
+<meta name="twitter:description" content="Eh, I&#39;ll post a blog tomorrow" />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/ventoy-boot/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-10-21T17:08:24&#43;0100 />
+    <meta property="article:published_time" content=2025-10-21T17:08:24&#43;0100 />
+    <meta property="og:url" content="http://localhost:1313/posts/ventoy-boot/" />
+
+    
+    <meta property="og:article:author" content="darrkenn" />
+    <meta property="article:author" content="darrkenn" />
+    <meta name="author" content="darrkenn" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Using ventoy to bypass secure boot",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-10-21",
+        "description": "",
+        "wordCount":  400 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-10-21",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "darrkenn"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.151.2">
+
+    
+    <meta property="og:url" content="http://localhost:1313/posts/ventoy-boot/">
+  <meta property="og:site_name" content="darrkenn">
+  <meta property="og:title" content="Using ventoy to bypass secure boot">
+  <meta property="og:description" content="Intro My laptop is a Acer Aspire Vero AV14, it serves me well and is very powerful. However recently Acer have locked my bios after I repeatedly changed my OS from Windows to Linux.I am completely unable to access the boot menu/bios settings as it prompts me to enter a password, I tried the usual solution of resetting the bios by removing the CMOS however it isn’t removable and I can’t find it on the board.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-21T17:08:24+01:00">
+    <meta property="article:modified_time" content="2025-10-21T17:08:24+01:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Using ventoy to bypass secure boot">
+  <meta name="twitter:description" content="Intro My laptop is a Acer Aspire Vero AV14, it serves me well and is very powerful. However recently Acer have locked my bios after I repeatedly changed my OS from Windows to Linux.I am completely unable to access the boot menu/bios settings as it prompts me to enter a password, I tried the usual solution of resetting the bios by removing the CMOS however it isn’t removable and I can’t find it on the board.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/posts/ventoy-boot/">
+    <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="https://darrkenn.com">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Using ventoy to bypass secure boot</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-10-21T17:08:24&#43;01:00" itemprop="datePublished"> 21 Oct 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h2 id="intro">Intro</h2>
+<p>My laptop is a <a href="https://business.currys.co.uk/catalogue/computing/laptops/windows-laptop/acer-aspire-vero-av14-52p-14-laptop-intel-core-i5-512-gb-ssd-blue/N853644W">Acer Aspire Vero AV14</a>, it serves me well and is very powerful.
+However recently Acer have locked my bios after I repeatedly changed my OS from Windows to Linux.I am completely unable to access the boot menu/bios settings as it prompts me to enter a password, I tried the usual solution of resetting the bios by removing the CMOS however it isn&rsquo;t removable and I can&rsquo;t find it on the board.</p>
+<p>I researched online about Acer backup codes and it led me to <a href="https://www.biosbug.com/acer/">this site</a>. It instructed me to press enter on the password screen 3 times and a code will show up, this code can be used to figure out the password and get back into the bios.However on my model, this is completely removed and no code appears. I noticed that a text file with an encrypted string would appear on any USB device I connected when I did this process.</p>
+<p>So I contacted Acer support and they told me to send them my laptop and I would have to pay for it&hellip; Absolutely not!!! I will not pay for a problem not caused by me on a otherwise functioning device. So I was stuck with Operating Systems that supported secure boot automatically in both the installer and the OS, I had to make a choice between <a href="https://fedoraproject.org/">Fedora</a> or <a href="https://www.debian.org/">Debian</a>. I went with Fedora because it had more up-to-date packages at the time and I was also interested in running <a href="https://github.com/hyprwm/Hyprland">Hyprland</a> because It&rsquo;s the first WM I used and the one I continue to use on my <a href="https://archlinux.org/">Arch</a> desktop. However the support for Hyprland wasn&rsquo;t great so I settled with using <a href="https://swaywm.org/">Sway</a>.</p>
+<p>I used Fedora for around 5 months and it worked perfectly fine, however I really wanted to use Arch. The reason I didn&rsquo;t use Arch from the start is because it&rsquo;s installer didn&rsquo;t support secure boot, I tried to use <a href="https://archboot.com/">Archboot</a> but that didn&rsquo;t work either. I accepted the fact that I couldn&rsquo;t run Arch until, I was using my <a href="https://www.ventoy.net/en/index.html">Ventoy</a> (USB intallation image that supports multiple isos at once) to install OpenBSD onto my server when I discovered an option to &ldquo;Search and boot BOOTX64.efi&rdquo;. This file begins the boot process of Linux booting into the systems boot manager, this is when I released I could use Ventoy as a way to bypass secure boot.</p>
+<h2 id="the-process">The process</h2>
+<p>First of all
+<img src="/posts/ventoy-boot/images/show_all_devices.png" alt="Cant load image" title="Show all devices"></p>
+<p><img src="/posts/ventoy-boot/images/partition_config.png" alt="Cant load image" title="Partition config"></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/darrkenn" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 darrkenn.
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+
+
+    
+    <script async src="http://localhost:1313/js/main.js" ></script>
+
+    
+
+</body>
+</html>
